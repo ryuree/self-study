@@ -19,16 +19,16 @@ window.addEventListener('keydown',function(e){
 ```js
 window.addEventListener('keydown',function(e){
     console.log(e.keyCode); //keycode값 찾기
-    const audio = document.querySeletor('audio[data-key="${e.keyCode}"]'); //audio data-key와 keycode값 일치
-    const key = document.querySeletor('.key[data-key="${e.keyCode}"]');//key data-key와 keycode값 일치
+    const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`); //audio data-key와 keycode값 일치
+    const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);//key data-key와 keycode값 일치
 });
 ```
 3. audio 이벤트
 ```js
 window.addEventListener('keydown',function(e){
     console.log(e.keyCode);
-    const audio = document.querySeletor('audio[data-key="${e.keyCode}"]');
-    const key = document.querySeletor('.key[data-key="${e.keyCode}"]');
+    const audio = document.querySeletor(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySeletor(`.key[data-key="${e.keyCode}"]`);
     if(!audio) return ; // audio값이 없으면 이벤트 중지, 있으면 이벤트 실행
     audio.currentTime = 0; //여러번 실행될 수 있게
     
@@ -38,7 +38,7 @@ window.addEventListener('keydown',function(e){
 4. 누른 키보드에 keycode와 동일한 key에 클래스 추가
 ```js
 window.addEventListener('keydown',function(e){
-    const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     if(!audio) return ; //stop the function from running all together
     audio.currentTime = 0; //rewind to the start
 
@@ -67,7 +67,7 @@ key.forEach(key=>key.addEventListner('transitionend',removeTransition));
 ## 최종 코드
 ```js
 function playAudio(e){
-    const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     if(!audio) return ; 
     audio.currentTime = 0;
 
