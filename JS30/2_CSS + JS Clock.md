@@ -6,7 +6,7 @@
 - transform-origin
 - transition-timing-function --> 전환 타이밍
 
-##구현
+## 구현
 1. 시계바늘
 ```html
 <div class="clock">
@@ -68,7 +68,7 @@ hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
 ```
 
-##최종코드
+## 최종코드
 ```js
 const secondHand = document.querySelector(".second-hand");
 const minsHand = document.querySelector(".min-hand");
