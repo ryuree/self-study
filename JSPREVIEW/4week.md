@@ -25,7 +25,7 @@ console.dir(student);
 - 객체를 생성할 때 프로토타입은 결정
 - 결정된 프로토타입 객체는 다른 임의의 객체로 변경 가능 --> 부모 객체인 프로토타입을 동적으로 변경할 수 있다는 것을 의미
 
-###[[Prototype]] vs prototype프로퍼티
+### [[Prototype]] vs prototype프로퍼티
 -함수도 객체이므로 [[Prototype]] 인터널 슬롯을 가지고 있지만, 일반 객체와 달리 prototype프로퍼티도 소유
 **주의해야 할 것은 prototype 프로퍼티는 프로토타입 객체를 가리키는 [[Prototype]] 인터널 슬롯은 다르다는 것이다. prototype 프로퍼티와 [[Prototype]]은 모두 프로토타입 객체를 가리키지만 관점의 차이가 있다.
 ```js
