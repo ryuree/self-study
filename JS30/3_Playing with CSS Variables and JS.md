@@ -41,9 +41,14 @@ img {
 ```js
 const inputs = document.querySelectorAll(".controls input");
 
-function handleUpdate() {
-  const suffix = this.dataset.sizing || "";
-  document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
+// function handleUpdate() {
+//   const suffix = this.dataset.sizing || "";
+//   document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
+// }
+
+function handleUpdate(e) {
+  const suffix = e.dataset.sizing || "";
+  document.documentElement.style.setProperty(`--${e.name}`,e.value + suffix);
 }
 
 inputs.forEach(input => input.addEventListener("change", handleUpdate));
